@@ -8,7 +8,7 @@ module.exports = {
         return response.json(users);
     },
 
-    async create(request, reponse) {
+    async create(request, response) {
         const { name, email, password } = request.body;
 
         await connection('users').insert({
