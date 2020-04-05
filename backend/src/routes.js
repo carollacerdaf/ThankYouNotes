@@ -4,10 +4,13 @@ const UsersController = require('./controllers/UserController');
 const ThankYouNotesController = require('./controllers/ThankYouNotesController');
 const BoredNotesController = require('./controllers/BoredNotesController');
 const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController');
 const routes = express.Router();
 
 routes.get('/users', UsersController.index)
 routes.post('/users', UsersController.create);
+routes.post('/session', SessionController.create);
+
 routes.post('/thanknotes', ThankYouNotesController.create);
 routes.post('/borednotes', BoredNotesController.create);
 routes.get('/profiletnotes', ProfileController.indexThankYouNotes);
