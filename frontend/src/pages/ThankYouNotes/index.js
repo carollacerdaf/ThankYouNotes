@@ -8,8 +8,8 @@ export default function ThankYouNotes() {
     return (
         <div>
             <img src={jarImg} alt=""/>
-            <Link className="button actionTnotes" to="/thanks/new">Agradecer</Link>
-            <Link className="button listTnotes" to="/tnotes/list">Lista</Link>
+            <Link style={{ textDecoration: 'none' }} className="button actionTnotes" to="/thanks/new">Agradecer</Link>
+            <Link style={{ textDecoration: 'none' }} className="button listTnotes" to="/tnotes/list">Listar</Link>
         </div>
     );
 }

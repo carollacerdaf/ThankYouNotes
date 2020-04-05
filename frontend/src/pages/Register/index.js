@@ -33,7 +33,7 @@ export default function Register() {
                 <h1>Cadastro</h1>
 
                 <Link className="back-link" to="/">
-                    <FiArrowLeft size={16} color="#E02041" />
+                    <FiArrowLeft size={16} color="#ff6f69" />
                     Voltar à tela inicial
                 </Link>
             </section>

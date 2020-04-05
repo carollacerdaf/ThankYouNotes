@@ -5,3 +5,10 @@
 .listTnotes{
     background: #7bc043;
 }
+
+.sendTButton{
+    background: #0392cf;
+    width: 100%;
+    height: 60px;
+    color:#fff;
+}

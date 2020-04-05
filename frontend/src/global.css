@@ -59,6 +59,7 @@ form textarea {
 
 .button:hover{
     filter: brightness(90%);
+    color:white;
 }
 
 .back-link{
@@ -111,6 +112,21 @@ form textarea {
     margin: 32px auto;
 }
 
+.profile-container header button {
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    border: 1px solid #dcdce6;
+    background: transparent;
+    margin-left: 16px;
+    transition: border-color 0.2s;
+
+}
+
+.profile-container header button:hover {
+    border-color: #999;
+}
+
 .profile-container h1 {
     margin-top: 80px;
     margin-bottom: 24px;
@@ -124,7 +140,7 @@ form textarea {
 }
 
 .profile-container ul li {
-    background: #FFF;
+    background: #faf6e9;
     padding: 24px;
     border-radius: 8px;
     position: relative;

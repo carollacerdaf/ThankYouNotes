@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import api from '../../../services/api';
-import { FiPower } from 'react-icons/fi';
+import { FiArrowLeft } from 'react-icons/fi';
 
 export default function ListTNotes() {
     const [tnotes, setTNotes] = useState([]);
@@ -22,7 +22,15 @@ export default function ListTNotes() {
 
     return (
         <div className="profile-container">      
-            <h1>Thank You Notes</h1>
+            <header>
+                <section>
+                    <Link className="back-link" to="/notes">
+                        <FiArrowLeft size={16} color="#ff6f69" />
+                    Voltar à home
+                </Link>
+                </section>
+                <h1>Notas de Agradeciemento</h1>
+            </header>
 
             <ul>
                 {tnotes.map(tnote => (

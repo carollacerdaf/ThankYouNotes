@@ -9,11 +9,11 @@ import '../../global.css'
 export default function Notes() {
     const userName = localStorage.getItem('userName');
     return (
-        <div>
+        <div className="profile-container">
             <TopBar></TopBar>
-            <section>
+            <header>
                 <h4>Bem vindo(a) {userName} !</h4>
-            </section>
+            </header>
             <div className="jar-container">
                 <ThankYouNotes />
                 <BoredNotes />

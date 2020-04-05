@@ -8,7 +8,7 @@ import './style.css'
 
 export default function TopBar() {
     const history = useHistory();
-    
+
     function handleLogout() {
         localStorage.clear();
 
@@ -17,10 +17,8 @@ export default function TopBar() {
     return (
         <Navbar bg="light" variant="light">
             <Navbar.Brand className="glass-jar-menu">
-                <img src={jarImg} alt="jar" />
-                </Navbar.Brand>
+            </Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link to='/notes'>Home</Nav.Link>
             </Nav>
             <Nav inline>
                 <Link onClick={handleLogout} type="button">

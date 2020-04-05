@@ -34,21 +34,21 @@ export default function NewBoredNote() {
         <div className="new-note-container">
             <section>
                 <Link className="back-link" to="/notes">
-                    <FiArrowLeft size={16} color="#E02041" />
+                    <FiArrowLeft size={16} color="#ff6f69" />
                     Voltar à home
                 </Link>
             </section>
             <div className="content">
                 <img src={boredImg} alt="Bored Heart"/>
                 <form onSubmit={handleBNote}>
-                    <textarea placeholder="Ideia" cols="30" rows="10"
+                    <textarea placeholder="Ideia" cols="30" rows="5"
                         value={note}
                         onChange={e => setNote(e.target.value)}></textarea>
                     <input type="date"
                         value={date}
                         onChange={e => setDate(e.target.value)} />
 
-                    <button className="sendButton" type="submit">Enviar</button>
+                    <button className="sendBButton" type="submit">Enviar</button>
                 </form>
             </div>
         </div>
