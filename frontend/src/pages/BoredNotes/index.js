@@ -8,9 +8,10 @@ import { gsap, TweenMax, Sine, Elastic } from 'gsap';
 export default function BoredNotes() {
     const fullJar = document.querySelector(".jarB");
     
-    async function move() {
-        await TweenMax.to(fullJar, 0.1, {x:"+=20", yoyo:true, repeat:5});
-        await TweenMax.to(fullJar, 0.1, {x:"-=20", yoyo:true, repeat:5});
+    function move() {
+         TweenMax.to(fullJar, 0.1, {x:"+=20", yoyo:true, repeat:5});
+         TweenMax.to(fullJar, 0.1, {x:"-=20", yoyo:true, repeat:5});
+         TweenMax.to(fullJar, 0.1, {x:"+=20", yoyo:true, repeat:5});
     }
 
     return (
