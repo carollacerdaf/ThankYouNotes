@@ -1,26 +1,20 @@
 import React from 'react';
 import ThankYouNotes from '../ThankYouNotes';
 import BoredNotes from '../BoredNotes';
-import { Link } from 'react-router-dom';
-import { FiArrowLeft, FiPower } from 'react-icons/fi';
+import TopBar from '../TopBar';
+
+import './style.css'
+import '../../global.css'
 
 export default function Notes() {
     const userName = localStorage.getItem('userName');
     return (
         <div>
+            <TopBar></TopBar>
             <section>
-                <button type="button">
-                    <FiPower size={18} />
-                </button>
-                <h1>NOTAS</h1>
-                <h2>Bem vindo(a) {userName} !</h2>
-                <Link className="back-link" to="/">
-                    <FiArrowLeft size={16} color="#E02041" />
-                    Voltar à tela inicial
-                </Link>
+                <h4>Bem vindo(a) {userName} !</h4>
             </section>
-            <div>
-
+            <div className="jar-container">
                 <ThankYouNotes />
                 <BoredNotes />
             </div>

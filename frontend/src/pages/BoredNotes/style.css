@@ -1,0 +1,14 @@
+.actionBnotes{
+    background: #ee4035;
+}
+
+.listBnotes{
+    background:  #f37736;
+}
+
+.sendButton{
+    background: #ee4035;
+    width: 100%;
+    height: 60px;
+    color:#fff;
+}

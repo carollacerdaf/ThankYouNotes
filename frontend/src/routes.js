@@ -5,6 +5,8 @@ import Register from './pages/Register';
 import NewNote from './pages/ThankYouNotes/NewNote';
 import NewBoredNote from './pages/BoredNotes/NewBoredNotes';
 import Notes from './pages/Notes';
+import ListBNotes from './pages/BoredNotes/ListBNotes';
+import ListTNotes from './pages/ThankYouNotes/ListTNotes';
 
 export default function Routes() {
     return (
@@ -15,6 +17,8 @@ export default function Routes() {
                 <Route path="/thanks/new" component={NewNote} />
                 <Route path="/bored/new" component={NewBoredNote} />
                 <Route path="/notes" component={Notes} />
+                <Route path="/bnotes/list" component={ListBNotes} />
+                <Route path="/tnotes/list" component={ListTNotes} />
             </Switch>
         </BrowserRouter>
     );
