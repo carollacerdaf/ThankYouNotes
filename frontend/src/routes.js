@@ -7,6 +7,7 @@ import NewBoredNote from './pages/BoredNotes/NewBoredNotes';
 import Notes from './pages/Notes';
 import ListBNotes from './pages/BoredNotes/ListBNotes';
 import ListTNotes from './pages/ThankYouNotes/ListTNotes';
+import Profile from './pages/PublicProfile';
 
 export default function Routes() {
     return (
@@ -19,6 +20,7 @@ export default function Routes() {
                 <Route path="/notes" component={Notes} />
                 <Route path="/bnotes/list" component={ListBNotes} />
                 <Route path="/tnotes/list" component={ListTNotes} />
+                <Route path="/profile/:id" component={Profile} />
             </Switch>
         </BrowserRouter>
     );

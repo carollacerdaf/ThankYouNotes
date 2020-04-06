@@ -15,5 +15,6 @@ routes.post('/thanknotes', ThankYouNotesController.create);
 routes.post('/borednotes', BoredNotesController.create);
 routes.get('/profiletnotes', ProfileController.indexThankYouNotes);
 routes.get('/profilebnotes', ProfileController.indexBoredNotes);
+routes.get('/user/:id', UsersController.indexById);
 
 module.exports = routes;
