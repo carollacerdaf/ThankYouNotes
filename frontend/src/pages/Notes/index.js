@@ -19,7 +19,7 @@ export default function Notes() {
         <div className="profile-container">
             <TopBar></TopBar>
             <header>
-                <h4>Bem vindo(a) {userName} !</h4>
+                <h4>Bem vindo(a), {userName} !</h4>
             </header>
             <div className="jar-container">
                 <ThankYouNotes />
