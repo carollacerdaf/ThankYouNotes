@@ -1,14 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import api from '../../../services/api';
-import { FiArrowLeft } from 'react-icons/fi';
+import { FiArrowLeft, FiTrash2 } from 'react-icons/fi';
+import moment from 'moment';
 
 export default function ListBNotes() {
     const [bnotes, setBNotes] = useState([]);
-    const history = useHistory();
-    const userName = localStorage.getItem('userName');
     const userId = localStorage.getItem('userId');
 
     useEffect(() => {
@@ -21,10 +20,18 @@ export default function ListBNotes() {
         })
     }, [userId]);
 
-    function handleLogout() {
-        localStorage.clear();
+    async function handleDeleteNote(id) {
+        try {
+            await api.delete(`borednotes/${id}`, {
+                headers: {
+                    Authorization: userId,
+                }
+            });
 
-        history.push('/');
+            setBNotes(bnotes.filter(bnotes => bnotes.id != id));
+        } catch (err) {
+            alert('Erro ao deletar');
+        }
     }
 
     return (
@@ -33,7 +40,7 @@ export default function ListBNotes() {
                 <section>
                     <Link className="back-link" to="/notes">
                         <FiArrowLeft size={16} color="#ff6f69" />
-                    Voltar à home
+                    Voltar
                 </Link>
                 </section>
                 <h1>Notas Xô Tédio</h1>
@@ -45,7 +52,11 @@ export default function ListBNotes() {
                         <p>{bnote.note}</p>
 
                         <strong>Data</strong>
-                        <p>{bnote.date}</p>
+                        <p>{moment(bnote.date).format('DD/MM/YYYY')}</p>
+
+                        <button onClick={() => handleDeleteNote(bnote.id)} type="button">
+                            <FiTrash2 size={20} color="#a8a8b3" />
+                        </button>
                     </li>
                 ))}
 

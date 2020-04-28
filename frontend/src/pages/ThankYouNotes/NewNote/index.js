@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import api from '../../../services/api';
+import moment from 'moment';
 
 import './style.css';
 import gladImg from '../../../assets/smiley.png'
 
 export default function NewNote() {
     const [note, setNote] = useState('');
-    const [date, setDate] = useState('');
+    const [date] = useState('');
     const userId = localStorage.getItem('userId');
 
     const history = useHistory();
@@ -18,7 +19,7 @@ export default function NewNote() {
         const data = { note, date };
 
         try {
-            const response = await api.post('/thanknotes', data, {
+           await api.post('/thanknotes', data, {
                 headers: {
                     Authorization: userId,
                 }
@@ -29,12 +30,17 @@ export default function NewNote() {
             alert('Erro');
         }
     }
+
+    function getDate() {
+        return moment().format('YYYY-MM-DD')
+    }
+
     return (
         <div className="new-note-container">
             <section>
                 <Link className="back-link" to="/notes">
                     <FiArrowLeft size={16} color="#ff6f69" />
-                Voltar à home
+                Voltar
             </Link>
             </section>
             <div className="content">
@@ -44,8 +50,8 @@ export default function NewNote() {
                         value={note}
                         onChange={e => setNote(e.target.value)}></textarea>
                     <input type="date"
-                        value={date}
-                        onChange={e => setDate(e.target.value)} />
+                        disabled
+                        value={getDate()} />
 
                     <button className="sendTButton" type="submit">Agradecer</button>
                 </form>

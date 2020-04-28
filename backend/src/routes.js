@@ -12,7 +12,9 @@ routes.post('/users', UsersController.create);
 routes.post('/session', SessionController.create);
 
 routes.post('/thanknotes', ThankYouNotesController.create);
+routes.delete('/thanknotes/:id', ThankYouNotesController.delete);
 routes.post('/borednotes', BoredNotesController.create);
+routes.delete('/borednotes/:id', BoredNotesController.delete);
 routes.get('/profiletnotes', ProfileController.indexThankYouNotes);
 routes.get('/profilebnotes', ProfileController.indexBoredNotes);
 routes.get('/user/:id', UsersController.indexById);

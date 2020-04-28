@@ -50,7 +50,7 @@ export default function Register() {
                     value={password}
                     onChange={e => setPassword(e.target.value)} />
 
-                <button className="button" type="submit">Cadastrar</button>
+                <button className="button listTnotes" type="submit">Cadastrar</button>
             </form>
         </div>
     );

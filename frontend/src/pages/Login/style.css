@@ -28,3 +28,8 @@ h1{
     margin-bottom: 32px;
  }
 
+ .logon-container section input{
+     margin-bottom: 10px;
+     border-width: 2px;
+ }
+

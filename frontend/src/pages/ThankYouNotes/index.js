@@ -6,10 +6,11 @@ import jarImg from '../../assets/jam.png'
 
 export default function ThankYouNotes() {
     return (
-        <div>
+        <div className="main-jar">
+            <h3>Gratidão</h3>
             <img src={jarImg} alt=""/>
-            <Link style={{ textDecoration: 'none' }} className="button actionTnotes" to="/thanks/new">Agradecer</Link>
-            <Link style={{ textDecoration: 'none' }} className="button listTnotes" to="/tnotes/list">Listar</Link>
+            <Link style={{ textDecoration: 'none' }} className="button buttonjar actionTnotes" to="/thanks/new">Agradecer</Link>
+            <Link style={{ textDecoration: 'none' }} className="button buttonjar listTnotes" to="/tnotes/list">Listar</Link>
         </div>
     );
 }

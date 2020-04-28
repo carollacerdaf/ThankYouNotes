@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ThankYouNotes from '../ThankYouNotes';
 import BoredNotes from '../BoredNotes';
 import TopBar from '../TopBar';
 
 import './style.css'
 import '../../global.css'
-import api from '../../services/api';
-import { Link } from 'react-router-dom';
 
 export default function Notes() {
-    const [users, setUsers] = useState([]);
+    //const [users, setUsers] = useState([]);
     const userName = localStorage.getItem('userName');
 
-    useEffect(() => {
+    /* useEffect(() => {
         api.get('users').then(response => {
             setUsers(response.data)
         })
-    });
+    }); */
     return (
         <div className="profile-container">
             <TopBar></TopBar>
@@ -27,10 +25,10 @@ export default function Notes() {
                 <ThankYouNotes />
                 <BoredNotes />
             </div>
-            <div>Usuários</div>
+           {/*  <div>Usuários</div>
             {users.map(user => (
                 <Link to={{pathname: `profile/${user.id}`}}>{user.name}</Link>
-                ))}
+                ))} */}
 
         </div>
 

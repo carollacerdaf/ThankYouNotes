@@ -5,6 +5,7 @@ import { FiLogIn } from 'react-icons/fi'
 import api from '../../services/api';
 import './style.css'
 import { useState } from 'react';
+import jarImg from '../../assets/jam.png'
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -31,16 +32,16 @@ export default function Login() {
         <div className="logon-container">
             <section className="form">
                 <form onSubmit={handleLogin}>
-                    <h1>Faça seu logon</h1>
+                    <h1>LogIn</h1>
 
-                    <input placeholder="Email"
+                    <input placeholder="E-mail"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                      />
                     <input type="password" placeholder="Senha"
                     value={password}
                     onChange={e => setPassword(e.target.value)} />
-                    <button className="button" type="submit">Entrar</button>
+                    <button className="button buttonlogin actionTnotes" type="submit">Entrar</button>
 
                     <Link to="/register" className="back-link">
                         <FiLogIn size={16} color="#ff6f69" />
