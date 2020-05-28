@@ -34,11 +34,11 @@ export default function Login() {
                 <form onSubmit={handleLogin}>
                     <h1>LogIn</h1>
 
-                    <input placeholder="E-mail"
+                    <input name="username" placeholder="E-mail"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                      />
-                    <input type="password" placeholder="Senha"
+                    <input name="password" type="password" placeholder="Senha"
                     value={password}
                     onChange={e => setPassword(e.target.value)} />
                     <button className="button buttonlogin actionTnotes" type="submit">Entrar</button>

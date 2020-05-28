@@ -18,8 +18,8 @@ export default function Register() {
 
         try {
             const response = await api.post('/users', data);
-
-            alert(`Bem vindo(a), ${response.data.name}`);
+            return (document.getElementById("idresponse").innerHTML = `Bem vindo(a), ${response.data.name}`);
+            //alert(`Bem vindo(a), ${response.data.name}`);
             history.push('/');
         } catch (err) {
             alert('Erro no cadastro , tente novamente');
@@ -36,7 +36,7 @@ export default function Register() {
                 </Link>
             </section>
             <div className="register-container">
-            <h1>Cadastro</h1>
+                <h1>Cadastro</h1>
                 <form onSubmit={handleRegister}>
                     <input
                         placeholder="Nome"
@@ -51,6 +51,7 @@ export default function Register() {
 
                     <button className="button buttonlogin listTnotes" type="submit">Cadastrar</button>
                 </form>
+                <p id="idresponse"></p>
             </div>
         </div>
     );
