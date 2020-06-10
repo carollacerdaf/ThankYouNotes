@@ -28,7 +28,7 @@ export default function NewBoredNote() {
             alert('Cadastrado!');
             history.push('/notes');
         } catch (err) {
-            alert('Erro');
+            document.getElementById("idresponse").innerHTML = "Erro ao inserir nota.";
         }
     }
 
@@ -54,6 +54,7 @@ export default function NewBoredNote() {
                         value={getDate()} />
 
                     <button className="sendBButton" type="submit">Enviar</button>
+                <p id="idresponse"></p>
                 </form>
             </div>
         </div>

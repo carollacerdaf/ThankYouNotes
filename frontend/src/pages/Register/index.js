@@ -19,10 +19,8 @@ export default function Register() {
         try {
             const response = await api.post('/users', data);
             return (document.getElementById("idresponse").innerHTML = `Bem vindo(a), ${response.data.name}`);
-            //alert(`Bem vindo(a), ${response.data.name}`);
-            history.push('/');
         } catch (err) {
-            alert('Erro no cadastro , tente novamente');
+            document.getElementById("idresponse").innerHTML = "Erro ao cadastrar";
         }
 
     }
@@ -49,7 +47,7 @@ export default function Register() {
                         value={password}
                         onChange={e => setPassword(e.target.value)} />
 
-                    <button className="button buttonlogin listTnotes" type="submit">Cadastrar</button>
+                    <button className="button buttonlogin" type="submit">Cadastrar</button>
                 </form>
                 <p id="idresponse"></p>
             </div>

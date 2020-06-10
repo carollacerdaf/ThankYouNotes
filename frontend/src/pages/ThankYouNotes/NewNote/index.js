@@ -27,7 +27,7 @@ export default function NewNote() {
             alert('Cadastrado!');
             history.push('/notes');
         } catch (err) {
-            alert('Erro');
+            document.getElementById("idresponse").innerHTML = "Erro ao inserir nota.";
         }
     }
 
@@ -54,6 +54,7 @@ export default function NewNote() {
                         value={getDate()} />
 
                     <button className="sendTButton" type="submit">Agradecer</button>
+                <p id="idresponse"></p>
                 </form>
             </div>
         </div>

@@ -7,14 +7,8 @@ import './style.css'
 import '../../global.css'
 
 export default function Notes() {
-    //const [users, setUsers] = useState([]);
     const userName = localStorage.getItem('userName');
 
-    /* useEffect(() => {
-        api.get('users').then(response => {
-            setUsers(response.data)
-        })
-    }); */
     return (
         <div className="profile-container">
             <TopBar></TopBar>
@@ -25,11 +19,6 @@ export default function Notes() {
                 <ThankYouNotes />
                 <BoredNotes />
             </div>
-           {/*  <div>Usuários</div>
-            {users.map(user => (
-                <Link to={{pathname: `profile/${user.id}`}}>{user.name}</Link>
-                ))} */}
-
         </div>
 
     );

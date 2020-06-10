@@ -9,3 +9,7 @@
 .register-container input{
     margin-bottom: 10px;
 }
+
+#idresponse{
+    color: red;
+}

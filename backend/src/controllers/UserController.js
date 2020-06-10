@@ -27,5 +27,13 @@ module.exports = {
         });
 
         return response.json({ name });
+    },
+
+    async delete(request, response) {
+        const {id} = request.body;
+
+        await connection('users').where('id', id).delete();
+
+        return response.status(204).send();
     }
 };

@@ -5,7 +5,7 @@ import { FiLogIn } from 'react-icons/fi'
 import api from '../../services/api';
 import './style.css'
 import { useState } from 'react';
-import jarImg from '../../assets/jam.png'
+import jarImg from '../../assets/main_jar.jpg'
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ export default function Login() {
 
             history.push('/notes');
         }catch(err){
-            alert("Erro");
+            document.getElementById("idresponse").innerHTML = "Usuário/Senha não encontrado";
         }
     }
     return (
@@ -41,14 +41,19 @@ export default function Login() {
                     <input name="password" type="password" placeholder="Senha"
                     value={password}
                     onChange={e => setPassword(e.target.value)} />
-                    <button className="button buttonlogin actionTnotes" type="submit">Entrar</button>
-
+                    <button className="button buttonlogin" type="submit">Entrar</button>
+                    <p id="idresponse"></p>
                     <Link to="/register" className="back-link">
                         <FiLogIn size={16} color="#ff6f69" />
                     Não tenho cadastro
                 </Link>
                 </form>
+                
+            </section>
+            <section>
+                <img className="main-jar" src={jarImg} alt=""/>
             </section>
         </div>
+           
     );
 }

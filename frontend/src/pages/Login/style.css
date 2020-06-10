@@ -1,5 +1,5 @@
 h1{
-    color:#ff6f69;
+    color:#E63D16;
 }
 
 .logon-container{
@@ -31,5 +31,11 @@ h1{
  .logon-container section input{
      margin-bottom: 10px;
      border-width: 2px;
+ }
+
+ .main-jar{
+     margin-left: 20%;
+    height: 350px;
+    width: 70%;
  }
 
